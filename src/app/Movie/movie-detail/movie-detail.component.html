@@ -1,0 +1,78 @@
+
+
+
+<div class="header" >
+    
+    <div class="header-info" >
+        <h1>{{movieDetail1.title}}</h1>
+        <p class="age"><a fragement="review" (click)="seeReview('review')">See Review</a> {{cast[0].name}}, {{cast[1].name}}</p>
+        <p class="review">Rating	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: &nbsp;&nbsp;  {{movieDetail1.vote_average}}/10</p>
+        <p class="review reviewgo">Language	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : &nbsp;&nbsp; {{movieDetail1.original_language}}</p>
+        <p class="review">Release &nbsp;&nbsp;&nbsp;&nbsp;: &nbsp;&nbsp; {{movieDetail1.release_date}}</p>
+        <p class="special">{{movieDetail1.overview}}</p>
+      
+        <a class="book" fragment="cast" (click)="go('cast')" >Cast & Crew</a>
+    </div>
+    <div class="imag">
+        <img [src]="'https://image.tmdb.org/t/p/w342'+movieDetail1.backdrop_path" style="height: 500px;margin-top: 70px;margin-left: 100px;">
+    </div>
+</div>
+<div class="cast">
+    <h1>Cast And Crew</h1>
+</div>
+<section id="cast">
+<div class="image-grid">
+<div *ngFor='let item of cast' class="grid-item">
+<mat-card  class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{item.name}}</mat-card-title>
+      <mat-card-subtitle>{{item.character}}</mat-card-subtitle>
+    </mat-card-header>
+    <img *ngIf="item.profile_path" mat-card-image [src]="'https://image.tmdb.org/t/p/w342'+item.profile_path" alt="Photo of a {{item.name}}">
+    <img *ngIf="!item.profile_path" mat-card-image [src]="'https://www.pngall.com/wp-content/uploads/5/Profile-Transparent.png'" alt="Photo of a {{item.name}}">
+    
+    <!-- <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions> -->
+  </mat-card>
+</div>
+</div>
+<!-- <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator> -->
+</section>
+<div class="cast">
+    <h1>Reviews</h1>
+</div>
+<section id="review">
+    <div class="row text-center" >
+    <div class="col-md-4 mb-5 mb-md-0" *ngFor="let i of review.results">
+        <div class="d-flex justify-content-center mb-4">
+          <img src="https://www.pngall.com/wp-content/uploads/5/User-Profile-PNG-File.png"
+            class="rounded-circle shadow-1-strong" width="150" height="150" />
+        </div>
+        <h5 class="mb-3">{{i.author}}</h5>
+        <h6 class="text-primary mb-3">{{i.author_details.username}}</h6>
+        <p class="px-xl-3">
+          <i class="fas fa-quote-left pe-2"></i>{{i.content}}
+        </p>
+        <!-- <ul class="list-unstyled d-flex justify-content-center mb-0">
+          <li>
+            <i class="fas fa-star fa-sm text-warning"></i>
+          </li>
+          <li>
+            <i class="fas fa-star fa-sm text-warning"></i>
+          </li>
+          <li>
+            <i class="fas fa-star fa-sm text-warning"></i>
+          </li>
+          <li>
+            <i class="fas fa-star fa-sm text-warning"></i>
+          </li>
+          <li>
+            <i class="fas fa-star-half-alt fa-sm text-warning"></i>
+          </li>
+        </ul> -->
+      </div>
+    </div>
+</section>

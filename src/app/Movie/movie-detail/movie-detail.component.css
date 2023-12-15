@@ -1,0 +1,135 @@
+.header {
+     background:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,47,1) 35%, rgba(0,212,255,1) 100%);
+    background-size: cover;
+    /* -webkit-background-size: cover; */
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    height: 600px;
+    
+    
+}
+.header-info {
+    float: right;
+    padding-top: 4em;
+    width: 25%;
+    margin-right: 2.5%;
+}
+p.review {
+    color: #f4f4f4;
+    font-size: 1.2em;
+    font-weight: 400;
+    line-height: 1.7em;
+}
+.top-header {
+    padding: 1.25em 3em 1.25em 2em;
+    background: rgba(255, 255, 255, 0.47);
+}
+.logo {
+    float: left;
+    width: 48%;
+}
+.search {
+    position: relative;
+    padding: 8px 10px;
+    width: 18%;
+    float: right;
+    border: 1px solid #f0f0f0;
+}
+* {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+
+}
+
+.header-info h1 {
+    color: #fff;
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 12px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #4b4b4b;
+}
+.header-info[_ngcontent-ng-c2853624417] h1[_ngcontent-ng-c2853624417] {
+    color: #fff;
+    font-size: 10em;
+    font-weight: 700;
+    margin-bottom: 12px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #4b4b4b;
+}
+p.special {
+    color: #f4f4f4;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.7em;
+    margin: 2.2em 0;
+}
+p.age {
+    color: #f4f4f4;
+    font-size: 1.15em;
+    font-weight: 400;
+    margin: 1.5em 0;
+    margin-bottom: 2.5em;
+}
+p.age a {
+    color: #3bd369;
+    padding: 7px 10px;
+    border: 2px solid #3bd369;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    -ms-border-radius: 4px;
+    margin-right: 1.2em;
+    text-decoration: none;
+}
+a.book {
+    background: #bb7b29;
+    font-size: 1.25em;
+    text-decoration: none;
+    padding: 12px 25px 12px 15px;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-bottom: 3px solid #2d2d2d;
+    width: 40%;
+    display: block;
+    margin-top: 18px;
+}
+
+.example-card {
+    max-width: 300px;
+   
+    margin-bottom: 50px;
+    margin-left: 20px;
+    
+    float: left;
+  }
+  
+  .example-header-image {
+    background-image: url('https://image.tmdb.org/t/p/w342/AhQMyQ10kz5g8Y3Fp54GPhgDxQS.jpg');
+    background-size: cover;
+  }
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust minmax value as needed */
+    gap: 20px; /* Adjust gap between items */
+  }
+  
+  .grid-item {
+    width: 100%; /* Ensure full width within the grid cell */
+  }
+  .cast{
+    background-color: #111211;
+    margin-top: 5px;
+    font-weight: 100;
+    color: #fff;
+  }
+  .imag{
+    height: 300px;
+  }
