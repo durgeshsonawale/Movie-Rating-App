@@ -5,7 +5,7 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     -ms-background-size: cover;
-    height: 600px;
+    height: 700px;
     
     
 }
@@ -97,7 +97,7 @@ a.book {
     -o-border-radius: 5px;
     -ms-border-radius: 5px;
     border-bottom: 3px solid #2d2d2d;
-    width: 40%;
+    width: 70%;
     display: block;
     margin-top: 18px;
 }
@@ -133,3 +133,14 @@ a.book {
   .imag{
     height: 300px;
   }
+  .mdc-button .mdc-button__label {
+    position: relative;
+    color: #fff;
+}
+.dis{
+    display: inline-flex;
+}
+.mat-mdc-button {
+    height: var(--mdc-text-button-container-height, 80px);
+    border-radius: var(--mdc-text-button-container-shape, var(--mdc-shape-small, px));
+}

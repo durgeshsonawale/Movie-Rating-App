@@ -15,7 +15,7 @@ export class MovieListComponent implements OnInit{
   list1:any;
   list:any
   dataSource:any;
-  bool=false;
+  bool=true;
   checked:BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
   checked1=false
   movieCol=["title","popularity","release_date","backdrop_path"]
@@ -27,14 +27,14 @@ export class MovieListComponent implements OnInit{
   ngOnInit(): void {
     this.movieService.getAll().subscribe(a=>{this.list1=a;
       this.checked.asObservable().subscribe((a)=> {this.bool=a;
-      if(this.bool){
+      if(!this.bool){
        
-      this.list=this.list1.results.filter((a: { adult: boolean; })=>a.adult=false)
+      this.list=this.list1.results.filter((a: { adult: boolean; })=>a.adult===false)
         console.log(this.list)
     }
       else{
         
-        this.list=this.list1.results.filter((a: { adult: boolean; })=>a.adult=true)
+        this.list=this.list1.results.filter((a: { adult: boolean; })=>a.adult===true)
         console.log(this.list);
       }
       
@@ -50,7 +50,7 @@ export class MovieListComponent implements OnInit{
   }
   getMovie(list:any){
     this.router.navigate(['trending-movies',list.id])
-    this.movieService.movieDetail=list
+    this.movieService.movieDetail.next(list)
     console.log(list)
 
   }

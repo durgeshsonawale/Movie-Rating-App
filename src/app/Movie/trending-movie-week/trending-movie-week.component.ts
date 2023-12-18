@@ -34,7 +34,7 @@ export class TrendingMovieWeekComponent {
   }
   getMovie(list:any){
     this.router.navigate(['trending-movies',list.id])
-    this.movieService.movieDetail=list
+    this.list=this.movieService.movieDetail.next(list)
     console.log(list)
 
   }

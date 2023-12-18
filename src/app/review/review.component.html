@@ -1,0 +1,15 @@
+<div class="display">
+<h2 mat-dialog-title>Movie Reviews </h2>
+<mat-dialog-content class="mat-typography" >
+    <div *ngFor="let a of reviewList.results">
+  <h1>{{a.author}}</h1>
+  <h3>Rating : {{a.author_details.rating}}</h3>
+  <p>{{a.content}}</p>
+</div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  
+</mat-dialog-actions>
+</div>
+
